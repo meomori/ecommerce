@@ -11,39 +11,39 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :name %>
-    <%= form.text_field :name, id: :product_name %>
+    <%= form.text_field :name, id: :product_name, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :price %>
-    <%= form.text_field :price, id: :product_price %>
+    <%= form.text_field :price, id: :product_price, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :quantity %>
-    <%= form.number_field :quantity, id: :product_quantity %>
+    <%= form.number_field :quantity, id: :product_quantity, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :description %>
-    <%= form.text_area :description, id: :product_description %>
+    <%= form.text_area :description, id: :product_description, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :brand %>
-    <%= form.text_field :brand, id: :product_brand %>
+    <%= form.text_field :brand, id: :product_brand, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :rating %>
-    <%= form.number_field :rating, id: :product_rating %>
+  <div class="form-group">
+    <p> Select a Category: </p>
+    <%= form.select :category_id, @categories.collect { |c| [c.name, c.id ]}, {include_blank: "Please select a category" } %>
   </div>
 
-  <div class="field">
-    <%= form.label :category_id %>
-    <%= form.number_field :category_id, id: :product_category_id %>
+  <div class="form-group">
+    <p>Upload Product Image: </p>
+    <%= form.file_field :image, class: "form-control" %>
   </div>
 
   <div class="actions">
