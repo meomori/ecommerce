@@ -1,0 +1,10 @@
+<h1>Admin#all_users</h1>
+
+<% @users.each do |user| %>
+    <div class="well">
+      <p>Email: <%= user.email %></p>
+      <p>Role: <%= user.role %></p>
+      <!--<p><%= link_to "Edit User", edit_user_path(id: user.id) %></p>-->
+      <p><%= link_to "Show User", show_user_path(id: user.id) %></p>
+    </div>
+<% end %>

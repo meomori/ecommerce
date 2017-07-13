@@ -38,7 +38,9 @@ gem 'mini_magick'
 gem 'cancancan'
 gem 'pry-rails'
 gem 'better_errors', group: :development
-
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+gem 'figaro'
+gem 'certified' #for the PC users
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
